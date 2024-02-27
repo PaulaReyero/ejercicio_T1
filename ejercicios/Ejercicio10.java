@@ -4,10 +4,41 @@ pida al usuario) con números aleatorios de tal modo que
 la matriz sea simétrica. Imprimir la matriz por pantalla. 
 Realice todo en una única función a la que se llama desde 
 el main.*/
+
 import java.util.Scanner;
 import java.util.Random;
 public class Ejercicio10 {
     public static void main(String[] args) {
+        System.out.println("Introduce las dimensiones de la matriz");
+        Scanner leerNum = new Scanner(System.in);
+        int filas = leerNum.nextInt();
+        int col = leerNum.nextInt();
+        crearMatriz(filas, col);
+    }
+
+    public static void crearMatriz(int filas, int col){
+        int[][] matriz = new int[filas][col];
+       Random rand = new Random();
+        for(int i = 0; i < filas; i++){
+            for(int j = 0; j < col; j++){
+                matriz[i][j] = rand.nextInt(10);
+                System.out.println(matriz[i][j]);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*public static void main(String[] args) {
         System.out.println("dimensiones: ");
         int i = leerNum();
         int j = leerNum();
@@ -32,6 +63,6 @@ public class Ejercicio10 {
             }
             System.out.println();
         }
-     }
+     }*/
 }
         
